@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_id"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by ID"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_name"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Name"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_age"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Age"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_weight"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Weight"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_height"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Height"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_hair"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Hair Color"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_profession"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Profession"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/search_friend"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search by Friend"
+        app:actionViewClass="android.widget.SearchView" />
+</menu>
