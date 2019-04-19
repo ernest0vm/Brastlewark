@@ -69,7 +69,6 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
         view = inflater.inflate(R.layout.fragment_main, container,false);
 
         fab = view.findViewById(R.id.floatingActionButton);
@@ -82,10 +81,9 @@ public class MainFragment extends Fragment {
         fab7 = view.findViewById(R.id.fabCont7);
         fab8 = view.findViewById(R.id.fabCont8);
 
-
-
         floatingMenu = view.findViewById(R.id.floatingMenu);
         floatingMenu.setVisibility(View.INVISIBLE);
+        floatingMenu.setAlpha(0);
 
         fab.setEnabled(false);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -173,16 +171,18 @@ public class MainFragment extends Fragment {
 
     private void showFABMenu(){
         isFABOpen=true;
-        floatingMenu.setVisibility(View.VISIBLE);
+
         floatingMenu.animate().translationY(-getResources().getDimension(R.dimen.standard_1));
+        floatingMenu.animate().setDuration(500).alpha(1);
+        floatingMenu.setVisibility(View.VISIBLE);
 
     }
 
     public void closeFABMenu(){
         isFABOpen=false;
         floatingMenu.animate().translationY(0);
+        floatingMenu.animate().setDuration(500).alpha(0);
         floatingMenu.setVisibility(View.INVISIBLE);
-
     }
 
     private static String GET(String url){
@@ -261,7 +261,7 @@ public class MainFragment extends Fragment {
             for (int i = 0; i < jsonArray.length(); i++) {
 
                     gnome = new Gnome();
-                    gnome.Id = String.valueOf(i);
+                    gnome.Id = getId(i);
                     gnome.Name = getName(i);
                     gnome.Photo = getPhoto(i);
                     gnome.Age = getAge(i);
@@ -289,6 +289,16 @@ public class MainFragment extends Fragment {
     private String getById(int index){
         try {
             return jsonArray.getJSONObject(index).toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private String getId(int index){
+
+        try {
+            return jsonArray.getJSONObject(index).getString("id");
         } catch (JSONException e) {
             e.printStackTrace();
             return null;

@@ -45,25 +45,25 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 //        new ImageManager.DownloadImageTask(imageView).execute(mDataset.get(cont).Photo);
 
         TextView txt1 = view.findViewById(R.id.txtName);
-        txt1.setText("Name: " +mDataset.get(cont).Name);
+        txt1.setText("Name: " + mDataset.get(cont).Name);
 
         TextView txt2 = view.findViewById(R.id.txtAge);
-        txt2.setText("Age: " +String.valueOf(mDataset.get(cont).Age));
+        txt2.setText("Age: " + mDataset.get(cont).Age);
 
         TextView txt3 = view.findViewById(R.id.txtHair);
-        txt3.setText("Hair Color: " +mDataset.get(cont).HairColor);
+        txt3.setText("Hair Color: " + mDataset.get(cont).HairColor);
 
         TextView txt4 = view.findViewById(R.id.txtProf);
-        txt4.setText("Professions: " +mDataset.get(cont).Professions);
+        txt4.setText("Professions: " + mDataset.get(cont).Professions);
 
         TextView txt5 = view.findViewById(R.id.txtFriends);
-        txt5.setText("Friends: " +mDataset.get(cont).Friends);
+        txt5.setText("Friends: " + mDataset.get(cont).Friends);
 
         TextView txt6 = view.findViewById(R.id.txtWeight);
-        txt6.setText("W: " + String.valueOf(mDataset.get(cont).Weight));
+        txt6.setText("W: " + mDataset.get(cont).Weight.substring(0,6));
 
         TextView txt7 = view.findViewById(R.id.txtHeight);
-        txt7.setText("H: " +String.valueOf(mDataset.get(cont).Height));
+        txt7.setText("H: " + mDataset.get(cont).Height.substring(0,6));
 
         cont++;
         return new MyViewHolder(view);
@@ -74,7 +74,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         Glide.with(_parent.getContext())
                 .load(mDataset.get(position).Photo)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder.getImage());
+                .into(holder.image);
     }
 
     @Override
