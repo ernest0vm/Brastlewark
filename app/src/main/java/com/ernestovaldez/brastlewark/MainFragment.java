@@ -3,7 +3,6 @@ package com.ernestovaldez.brastlewark;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -620,7 +619,6 @@ public class MainFragment extends Fragment {
 
         final EditText input = new EditText(getContext());
 
-//        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
 

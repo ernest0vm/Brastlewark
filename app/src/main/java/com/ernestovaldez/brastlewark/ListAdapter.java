@@ -1,5 +1,6 @@
 package com.ernestovaldez.brastlewark;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         _parent = parent;
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_component, parent, false);
 
+//        ImageView imageView = view.findViewById(R.id.imageView);
+//        new ImageManager.DownloadImageTask(imageView).execute(mDataset.get(cont).Photo);
+
         TextView txt1 = view.findViewById(R.id.txtName);
         txt1.setText("Name: " +mDataset.get(cont).Name);
 
@@ -66,7 +70,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(_parent.getContext())
                 .load(mDataset.get(position).Photo)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
