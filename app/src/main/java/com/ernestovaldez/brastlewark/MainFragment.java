@@ -170,7 +170,7 @@ public class MainFragment extends Fragment {
 
     private void showFABMenu(){
         isFABOpen=true;
-        floatingMenu.animate().translationY(-getResources().getDimension(R.dimen.standard_1));
+        floatingMenu.animate().translationY(-1260);
         floatingMenu.animate().setDuration(500).alpha(1);
 //        floatingMenu.setVisibility(View.VISIBLE);
 
