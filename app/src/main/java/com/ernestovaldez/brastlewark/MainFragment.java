@@ -82,7 +82,6 @@ public class MainFragment extends Fragment {
         fab8 = view.findViewById(R.id.fabCont8);
 
         floatingMenu = view.findViewById(R.id.floatingMenu);
-        floatingMenu.setVisibility(View.INVISIBLE);
         floatingMenu.setAlpha(0);
 
         fab.setEnabled(false);
@@ -171,18 +170,17 @@ public class MainFragment extends Fragment {
 
     private void showFABMenu(){
         isFABOpen=true;
-
         floatingMenu.animate().translationY(-getResources().getDimension(R.dimen.standard_1));
         floatingMenu.animate().setDuration(500).alpha(1);
-        floatingMenu.setVisibility(View.VISIBLE);
+//        floatingMenu.setVisibility(View.VISIBLE);
 
     }
 
     public void closeFABMenu(){
         isFABOpen=false;
-        floatingMenu.animate().translationY(0);
         floatingMenu.animate().setDuration(500).alpha(0);
-        floatingMenu.setVisibility(View.INVISIBLE);
+        floatingMenu.animate().translationY(1200);
+//        floatingMenu.setVisibility(View.INVISIBLE);
     }
 
     private static String GET(String url){
