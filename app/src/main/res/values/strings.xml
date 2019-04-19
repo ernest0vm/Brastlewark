@@ -10,7 +10,7 @@
     <string name="title_info">Information</string>
     <string name="str1">This app was developed by</string>
     <string name="str2">Ernesto Valdez</string>
-    <string name="str3">Can you contact me by:</string>
+    <string name="str3">Contact me by:</string>
     <string name="contact1">Email</string>
     <string name="contact2">mailto:ernestovm07@gmail.com</string>
     <string name="contact3">Whatsapp</string>
@@ -20,12 +20,12 @@
     <string name="avatar">Avatar</string>
     <string name="isConnected">Is Connected?</string>
 
-    <string name="find1">Find By Id</string>
-    <string name="find2">Find By Name</string>
-    <string name="find3">Find By Age</string>
-    <string name="find4">Find By Weight</string>
-    <string name="find5">Find By Height</string>
-    <string name="find6">Find By Hair Color</string>
-    <string name="find7">Find By Profession</string>
-    <string name="find8">Find By Friend</string>
+    <string name="find1">Find by Id</string>
+    <string name="find2">Find by Name</string>
+    <string name="find3">Find by Age</string>
+    <string name="find4">Find by Weight</string>
+    <string name="find5">Find by Height</string>
+    <string name="find6">Find by Hair Color</string>
+    <string name="find7">Find by Profession</string>
+    <string name="find8">Find by Friend</string>
 </resources>

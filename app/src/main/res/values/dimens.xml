@@ -4,12 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">32dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="standard_1">60dp</dimen>
-    <dimen name="standard_2">100dp</dimen>
-    <dimen name="standard_3">140dp</dimen>
-    <dimen name="standard_4">180dp</dimen>
-    <dimen name="standard_5">220dp</dimen>
-    <dimen name="standard_6">260dp</dimen>
-    <dimen name="standard_7">300dp</dimen>
-    <dimen name="standard_8">340dp</dimen>
+    <dimen name="standard_1">30dp</dimen>
+
 </resources>

@@ -10,307 +10,276 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="60dp"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:id="@+id/fabCont8"
-            android:layout_width="181dp"
+            android:id="@+id/floatingMenu"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="60dp"
+            android:alpha="100"
+            android:background="@drawable/shape"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
             app:layout_constraintEnd_toEndOf="@+id/recycler_view">
 
-                <TextView
-                    android:id="@+id/tv8"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/fabCont8"
+                    android:layout_width="181dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find8"
-                    android:textAlignment="textEnd" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab8"
-                    android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/tv8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find8"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont8"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont7"
+                    android:layout_width="181dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont8"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont8" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find7"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont7"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont7" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont6"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find6"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont6"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont5"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="42dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:shadowColor="@color/colorAccent"
+                            android:text="@string/find5"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont5"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont4"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find4"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont4"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont3"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find3"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont3"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont2"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find2"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont2"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fabCont1"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="42dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/floatingMenu"
+                    app:layout_constraintEnd_toEndOf="@+id/floatingMenu">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/find1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/colorAccent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:src="@drawable/ic_search_black_24dp"
+                            app:fabCustomSize="32dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fabCont1"
+                            app:layout_constraintEnd_toEndOf="@+id/fabCont1" />
+                </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/fabCont7"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv7"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find7"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont7"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont7" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont6"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv6"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find6"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont6"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont6" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont5"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv5"
-                    android:textColor="@color/colorAccent"
-                    android:shadowColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find5"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont5"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont5" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont4"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv4"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find4"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont4"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont4" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont3"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv3"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find3"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont3"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont3" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont2"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv2"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find2"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont2"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont2" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fabCont1"
-            android:layout_width="181dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="42dp"
-            android:layout_marginBottom="42dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="@+id/recycler_view">
-
-                <TextView
-                    android:id="@+id/tv1"
-                    android:textColor="@color/colorAccent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/find1"
-                    android:textAlignment="textEnd" />
-
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/fab1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:src="@drawable/ic_search_black_24dp"
-                    app:fabCustomSize="32dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/fabCont1"
-                    app:layout_constraintEnd_toEndOf="@+id/fabCont1" />
-        </LinearLayout>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -321,7 +290,7 @@
             android:layout_marginBottom="8dp"
             android:clickable="true"
             android:focusable="true"
-            android:src="@drawable/ic_filter_list_black_24dp"
+            android:src="@android:drawable/ic_search_category_default"
             android:tint="@android:color/white"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/recycler_view"

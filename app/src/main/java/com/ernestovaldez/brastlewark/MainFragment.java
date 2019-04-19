@@ -45,24 +45,16 @@ public class MainFragment extends Fragment {
     JSONArray jsonArray;
     String jsonRoot = "Brastlewark";
     FloatingActionButton fab;
-    FloatingActionButton fab1;
-    FloatingActionButton fab2;
-    FloatingActionButton fab3;
-    FloatingActionButton fab4;
-    FloatingActionButton fab5;
-    FloatingActionButton fab6;
-    FloatingActionButton fab7;
-    FloatingActionButton fab8;
+    LinearLayout fab1;
+    LinearLayout fab2;
+    LinearLayout fab3;
+    LinearLayout fab4;
+    LinearLayout fab5;
+    LinearLayout fab6;
+    LinearLayout fab7;
+    LinearLayout fab8;
 
-    LinearLayout cont1;
-    LinearLayout cont2;
-    LinearLayout cont3;
-    LinearLayout cont4;
-    LinearLayout cont5;
-    LinearLayout cont6;
-    LinearLayout cont7;
-    LinearLayout cont8;
-
+    LinearLayout floatingMenu;
 
     RecyclerView recycler;
     RecyclerView.Adapter mAdapter;
@@ -82,32 +74,19 @@ public class MainFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_main, container,false);
 
         fab = view.findViewById(R.id.floatingActionButton);
-        fab1 = view.findViewById(R.id.fab1);
-        fab2 = view.findViewById(R.id.fab2);
-        fab3 = view.findViewById(R.id.fab3);
-        fab4 = view.findViewById(R.id.fab4);
-        fab5 = view.findViewById(R.id.fab5);
-        fab6 = view.findViewById(R.id.fab6);
-        fab7 = view.findViewById(R.id.fab7);
-        fab8 = view.findViewById(R.id.fab8);
+        fab1 = view.findViewById(R.id.fabCont1);
+        fab2 = view.findViewById(R.id.fabCont2);
+        fab3 = view.findViewById(R.id.fabCont3);
+        fab4 = view.findViewById(R.id.fabCont4);
+        fab5 = view.findViewById(R.id.fabCont5);
+        fab6 = view.findViewById(R.id.fabCont6);
+        fab7 = view.findViewById(R.id.fabCont7);
+        fab8 = view.findViewById(R.id.fabCont8);
 
-        cont1 = view.findViewById(R.id.fabCont1);
-        cont2 = view.findViewById(R.id.fabCont2);
-        cont3 = view.findViewById(R.id.fabCont3);
-        cont4 = view.findViewById(R.id.fabCont4);
-        cont5 = view.findViewById(R.id.fabCont5);
-        cont6 = view.findViewById(R.id.fabCont6);
-        cont7 = view.findViewById(R.id.fabCont7);
-        cont8 = view.findViewById(R.id.fabCont8);
 
-        cont1.setVisibility(View.INVISIBLE);
-        cont2.setVisibility(View.INVISIBLE);
-        cont3.setVisibility(View.INVISIBLE);
-        cont4.setVisibility(View.INVISIBLE);
-        cont5.setVisibility(View.INVISIBLE);
-        cont6.setVisibility(View.INVISIBLE);
-        cont7.setVisibility(View.INVISIBLE);
-        cont8.setVisibility(View.INVISIBLE);
+
+        floatingMenu = view.findViewById(R.id.floatingMenu);
+        floatingMenu.setVisibility(View.INVISIBLE);
 
         fab.setEnabled(false);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -142,21 +121,21 @@ public class MainFragment extends Fragment {
         fab3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findDialog("input minimum Age", findClass.AGE);
+                findDialog("Enter minimum age", findClass.AGE);
             }
         });
 
         fab4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findDialog("input minimum Weight", findClass.Weight);
+                findDialog("Enter minimum weight", findClass.Weight);
             }
         });
 
         fab5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findDialog("input minimum Height", findClass.Height);
+                findDialog("Enter minimum height", findClass.Height);
             }
         });
 
@@ -195,45 +174,16 @@ public class MainFragment extends Fragment {
 
     private void showFABMenu(){
         isFABOpen=true;
-        cont1.setVisibility(View.VISIBLE);
-        cont2.setVisibility(View.VISIBLE);
-        cont3.setVisibility(View.VISIBLE);
-        cont4.setVisibility(View.VISIBLE);
-        cont5.setVisibility(View.VISIBLE);
-        cont6.setVisibility(View.VISIBLE);
-        cont7.setVisibility(View.VISIBLE);
-        cont8.setVisibility(View.VISIBLE);
+        floatingMenu.setVisibility(View.VISIBLE);
+        floatingMenu.animate().translationY(-getResources().getDimension(R.dimen.standard_1));
 
-        cont1.animate().translationY(-getResources().getDimension(R.dimen.standard_1));
-        cont2.animate().translationY(-getResources().getDimension(R.dimen.standard_2));
-        cont3.animate().translationY(-getResources().getDimension(R.dimen.standard_3));
-        cont4.animate().translationY(-getResources().getDimension(R.dimen.standard_4));
-        cont5.animate().translationY(-getResources().getDimension(R.dimen.standard_5));
-        cont6.animate().translationY(-getResources().getDimension(R.dimen.standard_6));
-        cont7.animate().translationY(-getResources().getDimension(R.dimen.standard_7));
-        cont8.animate().translationY(-getResources().getDimension(R.dimen.standard_8));
     }
 
     public void closeFABMenu(){
         isFABOpen=false;
+        floatingMenu.animate().translationY(0);
+        floatingMenu.setVisibility(View.INVISIBLE);
 
-        cont1.animate().translationY(0).setDuration(250);
-        cont2.animate().translationY(0).setDuration(250);
-        cont3.animate().translationY(0).setDuration(250);
-        cont4.animate().translationY(0).setDuration(250);
-        cont5.animate().translationY(0).setDuration(250);
-        cont6.animate().translationY(0).setDuration(250);
-        cont7.animate().translationY(0).setDuration(250);
-        cont8.animate().translationY(0).setDuration(250);
-
-        cont1.setVisibility(View.INVISIBLE);
-        cont2.setVisibility(View.INVISIBLE);
-        cont3.setVisibility(View.INVISIBLE);
-        cont4.setVisibility(View.INVISIBLE);
-        cont5.setVisibility(View.INVISIBLE);
-        cont6.setVisibility(View.INVISIBLE);
-        cont7.setVisibility(View.INVISIBLE);
-        cont8.setVisibility(View.INVISIBLE);
     }
 
     private static String GET(String url){
@@ -636,13 +586,13 @@ public class MainFragment extends Fragment {
                         searchByFriends(m_Text);
                         break;
                     case AGE:
-                        findDialog2("input maximum Age", findClass.AGE);
+                        findDialog2("Enter maximum age", findClass.AGE);
                         break;
                     case Weight:
-                        findDialog2("input maximum Weight", findClass.AGE);
+                        findDialog2("Enter maximum weight", findClass.AGE);
                         break;
                     case Height:
-                        findDialog2("input maximum Height", findClass.AGE);
+                        findDialog2("Enter maximum height", findClass.AGE);
                         break;
                     default:
                         break;
