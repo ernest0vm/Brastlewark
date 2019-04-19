@@ -452,7 +452,7 @@ public class MainFragment extends Fragment {
         searchList = new ArrayList<>();
 
         for (Gnome gnome : itemList) {
-            if (Integer.valueOf(gnome.Age) > minAge && Integer.valueOf(gnome.Age) < maxAge) {
+            if (Integer.valueOf(gnome.Age) >= minAge && Integer.valueOf(gnome.Age) <= maxAge) {
                 count++;
                 searchList.add(gnome);
             }
@@ -488,7 +488,7 @@ public class MainFragment extends Fragment {
         searchList = new ArrayList<>();
 
         for (Gnome gnome : itemList) {
-            if (Double.valueOf(gnome.Weight) > minWeight && Double.valueOf(gnome.Weight) < maxWeight) {
+            if (Double.valueOf(gnome.Weight) >= minWeight && Double.valueOf(gnome.Weight) <= maxWeight) {
                 count++;
                 searchList.add(gnome);
             }
@@ -506,7 +506,7 @@ public class MainFragment extends Fragment {
         searchList = new ArrayList<>();
 
         for (Gnome gnome : itemList) {
-            if (Double.valueOf(gnome.Height) > minHeight && Double.valueOf(gnome.Height) < maxHeight) {
+            if (Double.valueOf(gnome.Height) >= minHeight && Double.valueOf(gnome.Height) <= maxHeight) {
                 count++;
                 searchList.add(gnome);
             }
