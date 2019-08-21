@@ -3,13 +3,16 @@ package com.ernestovaldez.brastlewark;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TableRow;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class SecondaryFragment extends Fragment {
 
@@ -22,7 +25,12 @@ public class SecondaryFragment extends Fragment {
 
         ImageView imageView = view.findViewById(R.id.imageView1);
 
-        new ImageManager.DownloadImageTask(imageView).execute("https://media.licdn.com/dms/image/C5603AQEXulnjxwB8gQ/profile-displayphoto-shrink_200_200/0?e=1560384000&v=beta&t=a4WnMREp3rw7i69nqTKwWBJ6yStVGhcpdIQYV4Tpdx8");
+        //new ImageManager.DownloadImageTask(imageView).execute("https://avatars1.githubusercontent.com/u/11278416?s=400&v=4");
+
+        Glide.with(getContext())
+                .load("https://avatars1.githubusercontent.com/u/11278416?s=400&v=4")
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(imageView);
 
         TableRow tr1 = view.findViewById(R.id.tr1);
         tr1.setOnClickListener(tableLayoutOnClickListener);

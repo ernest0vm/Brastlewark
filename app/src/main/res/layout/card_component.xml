@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Card"
@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="@android:color/white">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/imageContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             android:contentDescription="@string/avatar"
             android:drawingCacheQuality="high"
             tools:srcCompat="@tools:sample/avatars" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/txtName"
@@ -120,4 +120,4 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteX="8dp" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

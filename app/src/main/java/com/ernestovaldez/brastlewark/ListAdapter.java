@@ -1,7 +1,7 @@
 package com.ernestovaldez.brastlewark;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,70 +11,65 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
-    private List<Gnome> mDataset;
-    private int cont = 0;
-    private ViewGroup _parent;
-    View view;
+    private ArrayList<Gnome> mDataset;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView image;
+        public ImageView image;
+        public View view;
+        TextView txt1;
+        TextView txt2;
+        TextView txt3;
+        TextView txt4;
+        TextView txt5;
+        TextView txt6;
+        TextView txt7;
 
         public MyViewHolder(View v) {
             super(v);
-            image = v.findViewById(R.id.imageView);
+            view = v;
+            image = view.findViewById(R.id.imageView);
+            txt1 = view.findViewById(R.id.txtName);
+            txt2 = view.findViewById(R.id.txtAge);
+            txt3 = view.findViewById(R.id.txtHair);
+            txt4 = view.findViewById(R.id.txtProf);
+            txt5 = view.findViewById(R.id.txtFriends);
+            txt6 = view.findViewById(R.id.txtWeight);
+            txt7 = view.findViewById(R.id.txtHeight);
         }
-
-        public ImageView getImage(){ return this.image;}
     }
 
-    public ListAdapter(List<Gnome> myDataset) {
+    public ListAdapter(ArrayList<Gnome> myDataset) {
         mDataset = myDataset;
     }
 
     @Override
-    public ListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        _parent = parent;
-        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_component, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.card_component, parent, false);
 
-//        ImageView imageView = view.findViewById(R.id.imageView);
-//        new ImageManager.DownloadImageTask(imageView).execute(mDataset.get(cont).Photo);
 
-        TextView txt1 = view.findViewById(R.id.txtName);
-        txt1.setText("Name: " + mDataset.get(cont).Name);
-
-        TextView txt2 = view.findViewById(R.id.txtAge);
-        txt2.setText("Age: " + mDataset.get(cont).Age);
-
-        TextView txt3 = view.findViewById(R.id.txtHair);
-        txt3.setText("Hair Color: " + mDataset.get(cont).HairColor);
-
-        TextView txt4 = view.findViewById(R.id.txtProf);
-        txt4.setText("Professions: " + mDataset.get(cont).Professions);
-
-        TextView txt5 = view.findViewById(R.id.txtFriends);
-        txt5.setText("Friends: " + mDataset.get(cont).Friends);
-
-        TextView txt6 = view.findViewById(R.id.txtWeight);
-        txt6.setText("W: " + mDataset.get(cont).Weight.substring(0,6));
-
-        TextView txt7 = view.findViewById(R.id.txtHeight);
-        txt7.setText("H: " + mDataset.get(cont).Height.substring(0,6));
-
-        cont++;
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Glide.with(_parent.getContext())
+        Glide.with(holder.view.getContext())
                 .load(mDataset.get(position).Photo)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.image);
+
+        holder.txt1.setText("Name: " + mDataset.get(position).Name);
+        holder.txt2.setText("Age: " + mDataset.get(position).Age);
+        holder.txt3.setText("Hair Color: " + mDataset.get(position).HairColor);
+        holder.txt4.setText("Professions: " + mDataset.get(position).Professions);
+        holder.txt5.setText("Friends: " + mDataset.get(position).Friends);
+        holder.txt6.setText("W: " + mDataset.get(position).Weight.substring(0,6));
+        holder.txt7.setText("H: " + mDataset.get(position).Height.substring(0,6));
     }
 
     @Override
